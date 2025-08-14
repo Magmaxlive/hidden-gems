@@ -99,15 +99,16 @@ const Contact = () => {
                     <ul className="list-wrap">
                       <li>
                         <h6 className="title">Phone</h6>
-                        <Link href="/tel:0123456789" style={{fontSize: "17px"}}>+64 21 201 2117</Link>
+                        <Link href="tel:092224426" style={{fontSize: "17px"}}>09 222 44 26</Link> <br />
+                         <Link href="tel:0220772156" style={{fontSize: "17px"}}>02 2 077 2156</Link>
                       </li>
                       <li>
                         <h6 className="title">Email</h6>
-                        <Link href="mailto:hello@Hidden Gems.com" style={{fontSize: "17px"}}>hello@thehiddengems.co.nz</Link>
+                        <Link href="mailto:karan@thehiddengems.co.nz" style={{fontSize: "17px"}}>karan@thehiddengems.co.nz</Link>
                       </li>
                       <li>
                         <h6 className="title">Address</h6 >
-                       <span style={{fontSize: "17px"}}> 1A/153 Stoddard RoadWesley,<br /> Auckland 1041, New Zealand</span>
+                       <span style={{fontSize: "17px"}}> 1/153 Stoddard Road,<br /> Wesley, Auckland 1041</span>
                       </li>
                     </ul>
                   </div>

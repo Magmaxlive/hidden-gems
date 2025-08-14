@@ -1,6 +1,9 @@
 import Layout from "@/components/layout/Layout";
 import Link from "next/link";
 import Marquee from "react-fast-marquee";
+import team_data from "@/data/team-data";
+
+
 export default function About() {
     return (<>
 
@@ -73,31 +76,6 @@ export default function About() {
 
                                 </div>
 
-                                {/* <div className="skill-feature">
-                                        <h3 className="skill-feature_title">BRANDING</h3>
-                                        <div className="progress">
-                                            <div className="progress-bar" style={{ width: '90%' }}>
-                                            </div>
-                                            <div className="progress-value"><span className="counter-number">90</span>%</div>
-                                        </div>
-                                    </div>
-                                    <div className="skill-feature">
-                                        <h3 className="skill-feature_title">DEVELOPMENT</h3>
-                                        <div className="progress">
-                                            <div className="progress-bar" style={{ width: '70%' }}>
-                                            </div>
-                                            <div className="progress-value"><span className="counter-number">70</span>%</div>
-                                        </div>
-                                    </div>
-                                    <div className="skill-feature">
-                                        <h3 className="skill-feature_title">MARKETING</h3>
-                                        <div className="progress">
-                                            <div className="progress-bar" style={{ width: '69%' }}>
-                                            </div>
-                                            <div className="progress-value"><span className="counter-number">69</span>%</div>
-                                        </div>
-                                    </div> */}
-
                             </div>
                         </div>
                     </div>
@@ -105,9 +83,10 @@ export default function About() {
             </section>
             {/*======== / Skill Section ========*/}
             {/*==============================
-Team Area
-==============================*/}
-            {/* <section className="pt-110 pb-120 position-relative">
+            Team Area
+            ==============================*/}
+
+            <section className="pt-110 pb-120 position-relative">
                 <div className="contact-area-bg-shape1 square-shape-wrap d-lg-inline-flex d-none">
                     <div className="square-shape1" />
                     <div className="square-shape2" />
@@ -116,100 +95,59 @@ Team Area
                 </div>
                 <div className="container">
                     <div className="section__title text-center mb-50">
-                        <h2 className="title wow img-custom-anim-top">Meet The Makers</h2>
+                        <h2 className="title wow img-custom-anim-top">Meet The Team</h2>
                     </div>
+
                     <div className="row gx-30 gy-30 justify-content-center">
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow img-custom-anim-top">
-                            <div className="team-card">
-                                <div className="team-card-thumb">
-                                    <img src="/assets/img/team/team-1-1.jpg" alt="img" />
-                                </div>
-                                <div className="team-card-details">
-                                    <div className="media-left">
-                                        <h4 className="team-card-title"><Link href="/team-details">Terry Souro</Link></h4>
-                                        <p className="team-card-text">Creative Director</p>
-                                    </div>
-                                    <div className="team-social">
-                                        <button className="icon-btn"><i className="fas fa-plus" /></button>
-                                        <div className="social-icon-wrap">
-                                            <Link href="https://facebook.com/"><i className="fab fa-facebook-f" /></Link>
-                                            <Link href="https://twitter.com/"><i className="fab fa-twitter" /></Link>
-                                            <Link href="https://linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
+
+                        {team_data.map((member, i) => {
+                            return (
+                                <>
+                                    <div key={i} className="col-xl-3 col-lg-4 col-md-6 wow img-custom-anim-top">
+                                        <div className="team-card">
+                                            <div className="team-card-thumb" style={{ width: "100%", height: "100%", overflow: "hidden" }}>
+                                                <img
+                                                    src={member.img}
+                                                    alt={member.alt}
+                                                    style={{
+                                                        height: '280px',
+                                                        objectFit: 'cover',
+                                                        objectPosition: 'top center',
+                                                        filter: 'grayscale(100%)',
+                                                        position: 'relative',
+                                                    }}
+                                                />
+                                            </div>
+
+                                            <div className="team-card-details">
+                                                <div className="media-left">
+                                                    <h4 className="team-card-title"><div href="#">{member.name}</div></h4>
+                                                    <p className="team-card-text">{member.title}</p>
+                                                </div>
+                                                {/* <div className="team-social">
+                                                    <button className="icon-btn"><i className="fas fa-plus" /></button>
+                                                    <div className="social-icon-wrap">
+                                                        <Link href="https://facebook.com/"><i className="fab fa-facebook-f" /></Link>
+                                                        <Link href="https://twitter.com/"><i className="fab fa-twitter" /></Link>
+                                                        <Link href="https://linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
+                                                    </div>
+                                                </div> */}
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow img-custom-anim-top">
-                            <div className="team-card">
-                                <div className="team-card-thumb">
-                                    <img src="/assets/img/team/team-1-2.jpg" alt="img" />
-                                </div>
-                                <div className="team-card-details">
-                                    <div className="media-left">
-                                        <h4 className="team-card-title"><Link href="/team-details">Souro Terry</Link></h4>
-                                        <p className="team-card-text">Creative Director</p>
-                                    </div>
-                                    <div className="team-social">
-                                        <button className="icon-btn"><i className="fas fa-plus" /></button>
-                                        <div className="social-icon-wrap">
-                                            <Link href="https://facebook.com/"><i className="fab fa-facebook-f" /></Link>
-                                            <Link href="https://twitter.com/"><i className="fab fa-twitter" /></Link>
-                                            <Link href="https://linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow img-custom-anim-top">
-                            <div className="team-card">
-                                <div className="team-card-thumb">
-                                    <img src="/assets/img/team/team-1-3.jpg" alt="img" />
-                                </div>
-                                <div className="team-card-details">
-                                    <div className="media-left">
-                                        <h4 className="team-card-title"><Link href="/team-details">Stephen</Link></h4>
-                                        <p className="team-card-text">Creative Director</p>
-                                    </div>
-                                    <div className="team-social">
-                                        <button className="icon-btn"><i className="fas fa-plus" /></button>
-                                        <div className="social-icon-wrap">
-                                            <Link href="https://facebook.com/"><i className="fab fa-facebook-f" /></Link>
-                                            <Link href="https://twitter.com/"><i className="fab fa-twitter" /></Link>
-                                            <Link href="https://linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6 wow img-custom-anim-top">
-                            <div className="team-card">
-                                <div className="team-card-thumb">
-                                    <img src="/assets/img/team/team-1-4.jpg" alt="img" />
-                                </div>
-                                <div className="team-card-details">
-                                    <div className="media-left">
-                                        <h4 className="team-card-title"><Link href="/team-details">Terry Souro</Link></h4>
-                                        <p className="team-card-text">Creative Director</p>
-                                    </div>
-                                    <div className="team-social">
-                                        <button className="icon-btn"><i className="fas fa-plus" /></button>
-                                        <div className="social-icon-wrap">
-                                            <Link href="https://facebook.com/"><i className="fab fa-facebook-f" /></Link>
-                                            <Link href="https://twitter.com/"><i className="fab fa-twitter" /></Link>
-                                            <Link href="https://linkedin.com/"><i className="fab fa-linkedin-in" /></Link>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                                </>
+                            )
+                        })}
+
+
                     </div>
                 </div>
-            </section> */}
+            </section>
+
             {/*======== / Team Section ========*/}
             {/*==============================
-Award Area
-==============================*/}
+            Award Area
+            ==============================*/}
             <section className="about-values-area pt-110 pb-120 theme-bg">
                 <div className="container">
 

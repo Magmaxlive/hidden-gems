@@ -14,7 +14,7 @@ export default function Footer2() {
                                     <div className="footer__widget footer__location">
                                         <h4 className="footer__widget-title">Location</h4>
                                         <div className="footer__content">
-                                            <p>1A/153 Stoddard RoadWesley, Auckland 1041
+                                            <p>1/153 Stoddard Road, Wesley, Auckland 1041
                                             </p>
                                         </div>
                                     </div>
@@ -23,7 +23,7 @@ export default function Footer2() {
                                     <div className="footer__widget footer__conversation">
                                         <h4 className="footer__widget-title">Start a conversation</h4>
                                         <div className="footer__content">
-                                            <p><Link href="mailto:work@Hidden Gemsdesign.com">hello@thehiddengems.co.nz</Link>
+                                            <p><Link href="mailto:karan@thehiddengems.co.nz">karan@thehiddengems.co.nz </Link>
                                             </p>
                                         </div>
                                     </div>
